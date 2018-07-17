@@ -1,0 +1,75 @@
+.choice {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    // justify-content: center;
+    &__header {
+        font-family: 'Quicksand', sans-serif;
+        color: $secondary-color;
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
+}
+
+.colors {
+    // background: ;
+    display: flex;
+    flex-flow: row wrap;
+    width: 242px;
+    margin-bottom: 2rem;
+    border: 1px solid $secondary-color;
+    &__box {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @for $i from 1 to 9 {
+            @if ($i == 4 or $i == 8) {
+                &:nth-child(#{$i}) {
+                    border-right: 0; 
+                }
+            } @else {
+                &:nth-child(#{$i}) {
+                    border-right: 1px solid $secondary-color;
+                }
+            } 
+        }
+        @for $i from 5 to 9 {
+            &:nth-child(#{$i}) {
+                border-top: 1px solid $secondary-color;
+            }
+        }
+    }
+    &__bullet {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        @each $key, $value  in $colors {
+            @at-root .colors__#{$key} {
+                background: $value;
+            }
+        }
+        transition: all .3s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+    }
+}
+
+.btn {
+    font-size: 1.4rem;
+    border: 0;
+    margin-bottom: 2rem;
+    color: $secondary-color;
+    padding: 1rem;
+    background: $third-color;
+    border-radius: 1.5rem;
+    width: 10rem;
+    border: 1px solid $secondary-color;
+    &:hover {
+        cursor: pointer;
+    }
+}

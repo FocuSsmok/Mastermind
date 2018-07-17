@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section choice">
+            <h1 class="choice__header">Mastermind</h1>
+            <button id="start" class="btn choice__start-game">Start</button>
+            <div class="choice__colors colors">
+                <div class="colors__box">
+                    <div data-color="red" data-index="0" class="colors__bullet colors__red"></div>
+                </div>
+                <div class="colors__box">
+                    <div data-color="green" data-index="1" class="colors__bullet colors__green"></div>
+                </div>
+                <div class="colors__box">
+                    <div data-color="blue" data-index="2" class="colors__bullet colors__blue"></div>
+                </div>
+                <div class="colors__box">
+                    <div data-color="yellow" data-index="3" class="colors__bullet colors__yellow"></div>
+                </div>
+                <div class="colors__box">
+                    <div data-color="orange" data-index="4" class="colors__bullet colors__orange"></div>
+                </div>
+                <div class="colors__box">
+                    <div data-color="purple" data-index="5" class="colors__bullet colors__purple"></div>
+                </div>
+                <div class="colors__box">
+                    <div data-color="mediumSpringGreen" data-index="6" class="colors__bullet colors__mediumSpringGreen"></div>
+                </div>
+                <div class="colors__box">
+                    <div data-color="sandyBrown" data-index="7" class="colors__bullet colors__sandyBrown"></div>
+                </div>
+            </div>
+            <button id="finish" class="btn choice__finish-game">Zakończ</button>
+        </div>
+        <div class="section game">
+            <div class="board">
+                <div class="board__properly-bullets properly">
+                    <div class="properly__bullet"></div>
+                    <div class="properly__bullet"></div>
+                    <div class="properly__bullet"></div>
+                    <div class="properly__bullet"></div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chance">
+                    <div class="chance__row">
+                        <div class="chance__bullets">
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                            <div data-click = "clickable" class="chance__bullet"></div>
+                        </div>
+                        <div class="chance__hints">
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                            <div class="chance__hint"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board__button-wrapper">
+                    <button id="check" class="btn btn__check btn__check--active btn__check--disabled" disabled>Sprawdź</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dist/js/game.js"></script>
+</body>
+</html>

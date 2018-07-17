@@ -1,0 +1,90 @@
+.game {
+    display: flex;
+    align-items: center;
+}
+
+.board {
+    width: 350px;
+    border: 1px solid $secondary-color;
+    margin: 2rem 0;
+    &__properly-bullets {
+        margin: 3rem 0;
+        height: 60px; 
+    }
+    &__button-wrapper {
+        padding: 1rem 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.properly {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    &__bullet {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: $hidden-bullet-color;
+        margin-right: .5rem; 
+    }
+}
+
+.chance {
+    height: 60px;
+    // border: 1px solid $secondary-color; 
+    &__row {
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    &__bullets {
+        width: 70%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding-left: 1rem;
+    }
+    &__bullet {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: $hidden-bullet-color;
+        margin-right: .5rem; 
+    }
+    &__hints {
+        width: 30%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 1rem;
+    }
+    &__hint {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: $hidden-bullet-color;
+        margin-right: .3rem; 
+        &--hitted {
+            background: #000;
+        }
+        &--almost {
+            background: salmon;
+        }
+    }
+}
+
+.btn__check {
+    margin-bottom: 0;
+    &--disabled {
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}

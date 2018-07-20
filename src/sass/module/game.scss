@@ -88,3 +88,44 @@
         }
     }
 }
+
+.dialog-window {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper {
+        min-width: 200px;
+        min-height: 150px;
+        max-width: 300px;
+        max-height: 300px;
+        background: rgba(113, 96, 110, .8);
+        padding: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+    &__result {
+        font-size: 2.2rem;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    &--hidden {
+        display: none;
+    }
+}
+
+.btn {
+    &--again {
+        width: 8rem;
+        padding: .5rem;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+}

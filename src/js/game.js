@@ -21,6 +21,7 @@ MYAPP.chances.activeBullet = {};
 MYAPP.chances.activeRow = {};
 MYAPP.chances.indexOfRow = 0;
 MYAPP.chances.node = [];
+MYAPP.dialogWindow = document.querySelector(".dialog-window");
 
 (function() {
     const buttons = document.querySelectorAll('.btn');
@@ -67,25 +68,22 @@ const randomColors = function() {
     return colors;
 };
 
-const restart = function() {
-    e.preventDefault();
+const finish = function(e) {
     window.location.reload();
 };
 
-const win = function() {
-    for (let i = 0; i < MYAPP.properly.length; i++) {
+const checkWinOrLose = function(result) {
+    for (let i  = 0; i < MYAPP.properly.length; i++) {
         MYAPP.properly[i].style.backgroundColor = MYAPP.colors[MYAPP.answearColors[i]];
     }
-    alert("Wygrałeś!!");
-    restart();
-};
-
-const lose = function() {
-    for (let i = 0; i < MYAPP.properly.length; i++) {
-        MYAPP.properly[i].style.backgroundColor = MYAPP.colors[MYAPP.answearColors[i]];
+    const dialogWindowChild = MYAPP.dialogWindow.firstElementChild;
+    dialogWindowChild.parentElement.classList.remove("dialog-window--hidden");
+    if (result === "win") {
+        dialogWindowChild.firstElementChild.textContent = `You ${result}`;
+    } else if(result === "lose") {
+        dialogWindowChild.firstElementChild.textContent = `You ${result}`;
     }
-    alert("Przegrałeś :( Spróbuj jeszcze raz!");
-    restart();
+    dialogWindowChild.firstElementChild.nextElementSibling.addEventListener("click", finish);
 };
 
 const updateHints = function(node, hints) {
@@ -101,16 +99,16 @@ const updateHints = function(node, hints) {
     }
     if (hittedHints === 4) {
         //win
-        win();
+        checkWinOrLose("win");
     } else if(hittedHints < 4 && MYAPP.chances.indexOfRow === 8) {
         //Lose
-        lose();
+        checkWinOrLose("lose");
     }
 };
 
 const checkResult = function(activeNode) {
     // console.dir(activeNode);
-    console.log(MYAPP.answearColors);
+    // console.log(MYAPP.answearColors);
     const properlyAnwears = [...MYAPP.answearColors];
     const yourAnswer = [];
     for (let i = 0; i < activeNode.children.length; i++) {
@@ -157,11 +155,11 @@ const testAnswear = function(e) {
     MYAPP.chances.activeRow = MYAPP.chances.node[index];
     MYAPP.chances.activeRow.firstElementChild.addEventListener("click", changeColor);
 
-
 };
 
 const init = function(e) {
     e.preventDefault();
+    this.disabled = true;
     let colors = randomColors();
     for (let i = 0; i < colors.length; i++) {
         MYAPP.answearColors[i] = colors[i];
@@ -176,3 +174,4 @@ const init = function(e) {
 };
 
 MYAPP.buttons.start.addEventListener('click', init);
+MYAPP.buttons.finish.addEventListener("click", finish);
